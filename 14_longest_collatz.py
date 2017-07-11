@@ -1,7 +1,7 @@
-def collatz(n, l=0):
+def collatz(n):
     if n == 1:
-        return l + 1
-    if n%2 == 0:
-        return collatz(n/2, l+1)
+        return 1
+    if n % 2 == 0:
+        return collatz(n / 2) + 1
     else:
-        return collatz(3*n+1, l+1)
+        return collatz(3 * n + 1) + 1
